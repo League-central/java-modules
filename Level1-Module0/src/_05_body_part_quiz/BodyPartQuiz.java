@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the default package, and change the names below.
 
-	String firstImage = "src/body_part_quiz/arnold.jpeg";
-	String secondImage = "src/body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/body_part_quiz/jack.jpeg";
+	String firstImage = "src/_05_body_part_quiz/arnold.jpeg";
+	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
+	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
+	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
