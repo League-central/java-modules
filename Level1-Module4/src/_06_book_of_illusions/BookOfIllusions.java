@@ -22,7 +22,7 @@ public class BookOfIllusions extends MouseAdapter {
 	public void run() {
 		// 2. make the frame visible
 		// 3. set the size of the frame
-		// 4. find 2 images and save them to your project’s default package
+		// 4. find 2 images and save them to your project’s _06_book_of_illusions folder
 		// 5. make a variable to hold the location of your image. e.g. "illusion.jpg"
 		// 6. create a variable of type "JLabel" but don’t initialize it yet
 		// 7. use the "loadImage..." methods below to initialize your JLabel
