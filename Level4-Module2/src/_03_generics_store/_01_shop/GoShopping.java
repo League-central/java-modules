@@ -1,4 +1,4 @@
-package _03_generics_store;
+package _03_generics_store._01_shop;
 
 public class GoShopping {
 	public static void main(String[] args) {

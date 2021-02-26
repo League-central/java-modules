@@ -1,8 +1,10 @@
-package _03_generics_store;
+package _03_generics_store._01_shop;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
+import _03_generics_store._02_food.Food;
 
 //The Cart class is a Bounded Type Generic class
 //

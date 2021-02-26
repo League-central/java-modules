@@ -1,10 +1,12 @@
-package _03_generics_store;
+package _03_generics_store._02_food;
 
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+
+import _03_generics_store._01_shop.Cart;
 
 public abstract class Food {
 	String item;

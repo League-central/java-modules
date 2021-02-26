@@ -1,16 +1,16 @@
-package _03_generics_store;
+package _03_generics_store._02_food;
 
 import java.util.Random;
 
 import javax.swing.JLabel;
 
-public class Cereal extends Food{
-	public Cereal() {
+public class Candy extends Food{
+	public Candy() {
 		if(new Random().nextBoolean()) {
-			this.item = "images/cereal1.jpeg";
+			this.item = "images/candy1.jpeg";
 		}
 		else {
-			this.item = "images/cereal2.jpeg";
+			this.item = "images/candy2.jpeg";
 		}
 	}
 

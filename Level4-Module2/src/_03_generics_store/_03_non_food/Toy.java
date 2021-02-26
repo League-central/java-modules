@@ -1,16 +1,16 @@
-package _03_generics_store;
+package _03_generics_store._03_non_food;
 
 import java.util.Random;
 
 import javax.swing.JLabel;
 
-public class Clothing extends NonFood{
-	public Clothing() {
+public class Toy extends NonFood {
+	public Toy() {
 		if(new Random().nextBoolean()) {
-			this.item = "images/clothing1.jpeg";
+			this.item = "images/toy1.jpeg";
 		}
 		else {
-			this.item = "images/clothing2.jpeg";
+			this.item = "images/toy2.jpeg";
 		}
 	}
 
