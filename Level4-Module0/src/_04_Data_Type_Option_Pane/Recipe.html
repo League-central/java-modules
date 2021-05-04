@@ -47,7 +47,9 @@
                                 <li>Initialize the dataTypes array to have one of each unique value using the .values() method.
 
                                 </li>
-                                <li>Create a switch statement that switches on dataType. For each primitive data type, create a Message Dialog that tells the user what kinds of values the type can contain and use the getter to display how many bits it is made up of.
+                                <li>Create an JOptionePane <a href="https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html#showOptionDialog(java.awt.Component,%20java.lang.Object,%20java.lang.String,%20int,%20int,%20javax.swing.Icon,%20java.lang.Object[],%20java.lang.Object)">Option Dialog</a> that asks the user to select the data type they want to learn about. Use the dataTypes array for the options parameter and save the result into an int.
+                                </li>
+                                <li>Create a switch statement that switches on the result of your Option dialog. For each value in your data type enum, create a Message Dialog that tells the user what kinds of values the type can contain and use the getter to display how many bits it is made up of.
                                 </li>
                             </ol>
                             <div style="clear:both;"></div>
