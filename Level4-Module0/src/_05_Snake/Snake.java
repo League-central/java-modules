@@ -40,25 +40,7 @@ public class Snake {
         int nextX = 0;
         int nextY = 0;
 
-        switch (currentDirection) {
-        case UP: {
-            nextY -= 1;
-            break;
-        }
-        case DOWN: {
-            nextY += 1;
-            break;
-        }
-        case LEFT: {
-            nextX -= 1;
-            break;
-        }
-        case RIGHT: {
-            nextX += 1;
-            break;
-        }
-        }
-
+        
         /*
          * Change the Location of each SnakeSegment in your snake ArrayList to
          * the Location of the segment in front of it.
@@ -66,28 +48,20 @@ public class Snake {
          * Use a loop starting at the end of the ArrayList and stop before the
          * head of the snake (index 0) or you will go out of bounds.
          */
-
-        for (int i = snake.size() - 1; i > 0; i--) {
-            SnakeSegment s = snake.get(i);
-            SnakeSegment t = snake.get(i - 1);
-            s.setLocation(t.getLocation());
-        }
+        
+        
 
         /*
          * Create a new Location object and initialize it with the values
          * calculated in step 1. Then set the head's location equal to the new
          * location.
          */
+        
+        
 
-        Location newLocation = new Location(head.getLocation().getX() + nextX,
-                head.getLocation().getY() + nextY);
-        head.setLocation(newLocation);
+        // Set the canMove member variable to true.
 
-        /*
-         * Set the canMove member variable to true.
-         */
 
-        canMove = true;
 
     }
 
@@ -101,11 +75,8 @@ public class Snake {
          * Hint: Use the isOppositeDirection method to check if Direction d is
          * opposite.
          */
-
-        if (!isOppositeDirection(direction) && canMove) {
-            currentDirection = direction;
-            canMove = false;
-        }
+        
+        
 
     }
 
@@ -121,21 +92,6 @@ public class Snake {
 
         boolean isOpposite = true;
 
-        switch (direction) {
-        case UP:
-            isOpposite = currentDirection == Direction.DOWN;
-            break;
-        case DOWN:
-            isOpposite = currentDirection == Direction.UP;
-            break;
-        case RIGHT:
-            isOpposite = currentDirection == Direction.LEFT;
-            break;
-        case LEFT:
-            isOpposite = currentDirection == Direction.RIGHT;
-            break;
-        }
-
         return isOpposite;
     }
 
@@ -143,15 +99,13 @@ public class Snake {
 
         // Clear the snake.
 
-        snake.clear();
-
+        
+        
         /*
          * Create a new Location object for the head at SnakeGame.WIDTH / 2,
          * SnakeGame.HEIGHT / 2.
          */
 
-        Location newLocation = new Location(SnakeGame.WIDTH / 2,
-                SnakeGame.HEIGHT / 2);
 
         /*
          * Set the head member variable equal to a new SnakeSegment object. Use
@@ -159,11 +113,11 @@ public class Snake {
          * constant for the size.
          */
 
-        head = new SnakeSegment(newLocation, BODY_SIZE);
+
 
         // Add the head to the snake.
 
-        snake.add(head);
+
 
     }
 
@@ -174,13 +128,9 @@ public class Snake {
          * outside of the window and false otherwise.
          */
 
-        if (head.getLocation().getX() < 0
-                || head.getLocation().getX() >= SnakeGame.WIDTH
-                || head.getLocation().getX() < 0
-                || head.getLocation().getY() >= SnakeGame.HEIGHT) {
-            return true;
-        }
+
         return false;
+        
     }
 
     public boolean isHeadCollidingWithBody() {
@@ -190,11 +140,7 @@ public class Snake {
          * same location as any other body segment.
          */
 
-        for (int i = 1; i < snake.size(); i++) {
-            if (head.getLocation().equals(snake.get(i).getLocation())) {
-                return true;
-            }
-        }
+        
         return false;
     }
 
@@ -204,12 +150,6 @@ public class Snake {
          * Complete the method so it returns true if the passed in location is
          * located on the snake.
          */
-
-        for (SnakeSegment s : snake) {
-            if (loc.equals(s.getLocation())) {
-                return true;
-            }
-        }
 
         return false;
     }

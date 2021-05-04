@@ -39,7 +39,7 @@ class Car {
      * class.
      * 
      * This is the preferred default for most member variables as well as helper
-     * methods that assist the class in performing tasks but have no outside
+     * methods* that assist the class in performing tasks, but have no outside
      * utility.
      */
 
@@ -78,7 +78,7 @@ class Car {
      * format similar to the method shown below.
      */
 
-    public double getfuelInTank() {
+    public double getFuelInTank() {
 
         return fuelInTank;
 
@@ -90,7 +90,7 @@ class Car {
      * format similar to the method shown below.
      */
 
-    public void setfuelInTank(double fuelInTank) {
+    public void setFuelInTank(double fuelInTank) {
 
         if (fuelInTank > 0 && fuelInTank <= tankCapacity) {
 
@@ -128,7 +128,7 @@ class Car {
 
         if (fuelInTank()) {
             System.out.println("I'm driving my " + color + "car...");
-            setfuelInTank(fuelInTank - 1);
+            setFuelInTank(fuelInTank - 1);
         } else {
             System.out.println("I'm out of gas.");
         }
@@ -162,7 +162,7 @@ class SUV extends Car {
 
     }
 
-    public void offroad() {
+    private void offroad() {
 
         drive();
 
